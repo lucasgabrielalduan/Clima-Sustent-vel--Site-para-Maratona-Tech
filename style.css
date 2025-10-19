@@ -1,0 +1,220 @@
+/* Importação de uma fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Variáveis de Cores (Paleta de Cores Sustentável) */
+:root {
+    --cor-verde-principal: #008080; /* Verde Teal, moderno e forte */
+    --cor-verde-claro: #4CAF50;    /* Verde Suave para destaque */
+    --cor-fundo-claro: #F5F5F5;   /* Fundo quase branco */
+    --cor-texto-escuro: #333;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--cor-texto-escuro);
+    background-color: #ffffff;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: var(--cor-verde-principal);
+    color: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px var(--cor-sombra);
+}
+
+.logo h1 {
+    font-size: 1.6em;
+    font-weight: 700;
+}
+
+.logo .subtitulo {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 8px 15px;
+    transition: background-color 0.3s, border-radius 0.3s;
+    font-weight: 400;
+}
+
+nav ul li a:hover {
+    background-color: var(--cor-verde-claro);
+    border-radius: 5px;
+}
+
+/* Seção de Destaque (Hero) */
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 60px 5%;
+    background-color: var(--cor-fundo-claro);
+    gap: 40px;
+}
+
+.hero-imagem {
+    width: 50%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 4px 4px 15px var(--cor-sombra);
+}
+
+.hero-texto {
+    width: 50%;
+}
+
+.hero-texto h2 {
+    font-size: 2.2em;
+    color: var(--cor-verde-principal);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Botões */
+.botao-acao {
+    display: inline-block;
+    background-color: var(--cor-verde-principal);
+    color: white;
+    padding: 12px 25px;
+    margin-top: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botao-acao:hover {
+    background-color: #006666; /* Tom mais escuro */
+    transform: translateY(-2px);
+}
+
+.secundario {
+    background-color: var(--cor-verde-claro);
+}
+.secundario:hover {
+    background-color: #388E3C;
+}
+
+/* Grid de Soluções */
+.solucoes-grid {
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.solucao-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px var(--cor-sombra);
+    transition: transform 0.3s;
+}
+
+.solucao-card:hover {
+    transform: translateY(-5px);
+}
+
+.solucao-card h3 {
+    color: var(--cor-verde-principal);
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.solucao-card img {
+    width: 60px; /* Ícones pequenos e centralizados */
+    margin-bottom: 15px;
+}
+
+.solucao-card ul {
+    list-style: none;
+    padding-top: 10px;
+    text-align: left;
+    margin-left: 20px;
+}
+
+.solucao-card li {
+    padding-left: 10px;
+    position: relative;
+}
+
+.solucao-card li::before {
+    content: "🌱"; /* Ícone de folha simples */
+    position: absolute;
+    left: -10px;
+}
+
+/* Seção de Chamada Final */
+.chamada {
+    text-align: center;
+    padding: 50px 5%;
+    background-color: var(--cor-verde-principal);
+    color: white;
+}
+
+.chamada h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85em;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-imagem, .hero-texto {
+        width: 100%;
+    }
+
+    .hero-imagem {
+        margin-bottom: 20px;
+    }
+    
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        padding-top: 10px;
+        justify-content: center;
+    }
+
+    nav ul li a {
+        margin: 0 8px;
+    }
+}
